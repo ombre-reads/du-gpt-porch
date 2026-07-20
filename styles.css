@@ -224,6 +224,44 @@ p {
   border-top: 1px solid var(--soft);
 }
 
+.bench-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.bench-card {
+  min-height: 320px;
+  padding: 28px;
+  border: 1px solid var(--soft);
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.bench-card:first-child {
+  grid-column: 1 / -1;
+  min-height: 250px;
+  background: var(--wash);
+}
+
+.bench-number,
+.bench-question {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Noto Sans CJK SC", sans-serif;
+}
+
+.bench-number {
+  margin-bottom: 34px;
+  color: var(--moss);
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+}
+
+.bench-question {
+  margin: 24px 0 0;
+  color: var(--ink);
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
 .note,
 .stone,
 .principles article {
@@ -307,5 +345,13 @@ p {
 
   .page {
     padding-top: 56px;
+  }
+
+  .bench-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bench-card:first-child {
+    grid-column: auto;
   }
 }
